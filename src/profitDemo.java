@@ -1,37 +1,44 @@
-package newprofit;
+//package NewProfit;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class profitDemo {
 
 	public static void main(String[] args) {
-		int index=-1; boolean ep=false; double com;
-		ArrayList<Employees> em =new ArrayList<Employees>();
-		ArrayList<Salary> s =new ArrayList<Salary>();
+		int index=-1; 
+		boolean ep=false; 
+		double com;
+		
+		ArrayList<employees> em =new ArrayList<employees>();
+		ArrayList<salary> s =new ArrayList<salary>();
 	
 		
 		Scanner input =new Scanner (System.in);
 		char ch;
 		do {
-			System.out.println("Enter employeesID :");
+			
+			System.out.print("Enter EmployeesID : ");
 			String id=input.next();
-			System.out.println("Enter employees name :");
+			System.out.print("Enter Employees Name : ");
 			String name=input.next();
-			System.out.println("Enter salary");
+			System.out.print("Enter Salary : ");
 			double money =input.nextInt();
-			em.add(new Employees(name,id));
-			s.add(new Salary(money));
+			em.add(new employees(name,id));
+			s.add(new salary(money));
 			System.out.println("Do you want enter again [y/n]");
 			ch = input.next().charAt(0);
 			}while(ch=='y');
-		for(int i=0;i<em.size();i++) {
-			em.get(i).setSalary(s.get(i));
+				for(int i=0;i<em.size();i++) {
+					em.get(i).setSalary(s.get(i));
 		}
-		System.out.println("==================================================");
+		
+			System.out.println("==================================================");
+	
 		do {
-			System.out.println("Enter EmployeeID :");
+			
+			System.out.print("Enter EmployeeID : ");
 			String num =input.next();
-			System.out.println("Enter saleamount");
+			System.out.print("Enter Sale amount : ");
 			double sale=input.nextDouble();
 			for(int i=0;i<em.size();i++) {
 				if(em.get(i).getId().equals(num)) {
@@ -51,21 +58,15 @@ public class profitDemo {
 				s.get(index).setCommission(com);
 					
 			}else {
-				System.out.println("not have Employees number");
+				System.out.println("!! Not have Employees number !!");
 			}
-			System.out.println("Do you want enter again [y/n]");
+			System.out.print("Do you want enter again [y/n]");
 			ch = input.next().charAt(0);
-		}while(ch=='y');
-		
-		for (int i = 0; i <em.size() ; i++) {
-			System.out.println(em.get(i).toString());
+		}	while(ch=='y');
+			for (int i = 0; i <em.size() ; i++) {
+				System.out.println(em.get(i).toString());
 
 
 		}
-		
-		
-		
-
 	}
-
 }

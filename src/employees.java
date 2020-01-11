@@ -1,19 +1,19 @@
-package newprofit;
+//package NewProfit;
 public class employees {
 
 	
 	public String name;
 	public String id;
-	private Salary sl;
+	private salary sl;
 	
-	public void setSalary(Salary s) {
+	public void setSalary(salary s) {
 		this.sl=s;
 	}
-	public Salary getSalary() {
+	public salary getSalary() {
 		return sl;
 	}
 	
-	public Employees(String name, String id) {
+	public employees(String name, String id) {
 		this.name = name;
 		this.id = id;
 	}

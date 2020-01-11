@@ -1,4 +1,4 @@
-package newprofit;
+//package NewProfit;
 public class salary {
 		
 	public double salary;
@@ -6,7 +6,7 @@ public class salary {
 
 	
 	
-	public Salary(double salary) {
+	public salary(double salary) {
 		this.salary = salary;
 	}
 
