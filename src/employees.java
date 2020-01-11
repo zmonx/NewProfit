@@ -33,14 +33,7 @@ public class employees {
 		return id;
 	}
 	
-	public double checkSalary() {
-		double sum = sl.salary+sl.commission;
-		if (sum <18000) {
-			 return 18000;
-		}
-		return sum;
-		
-	}
+
 
 	public void setId(String id) {
 		this.id = id;
@@ -48,6 +41,6 @@ public class employees {
 
 	@Override
 	public String toString() {
-		return String.format("Name %s Salary+commission+bonus %.2f",this.name,checkSalary());
+		return String.format("Name %s Salary+commission+bonus %.2f",this.name,sl.getSarary());
 	}
 }
