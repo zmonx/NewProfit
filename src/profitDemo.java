@@ -64,7 +64,7 @@ public class profitDemo {
 			ch = input.next().charAt(0);
 		}	while(ch=='y');
 			for (int i = 0; i <em.size() ; i++) {
-				System.out.println(em.get(i).name+"Salary"+em.get(i).checkSalary());
+				System.out.println("Salary of "+em.get(i).name+" : "+em.get(i).checkSalary());
 
 
 		}
